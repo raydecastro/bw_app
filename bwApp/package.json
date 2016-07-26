@@ -1,0 +1,16 @@
+{
+  "name": "application-template",
+  "version": "0.0.0",
+  "description": "Application Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "destroy": "mocha test --recursive --watch"
+  },
+  "author": "lovejedi",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
