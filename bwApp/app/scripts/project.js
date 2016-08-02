@@ -6,9 +6,17 @@ var love = love || {};
     namespace.Project = Project;
 
     function Project() {
-        
+        this.subProjects = [];         
     }
 
+    Project.prototype.addProject = function(project) {
+        this.subProjects.push(project);
+    };
+
+    Project.prototype.getProjectCount = function () {
+        return this.subProjects.length; 
+    };
+    
     module.exports = Project;
 
 })(love);
