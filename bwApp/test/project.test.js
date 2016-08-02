@@ -9,4 +9,24 @@ describe('Project', function () {
 
         assert.notEqual(project, undefined);
     });
+    it('should have an id', function () {
+        var project = new Project(); 
+
+        project.id = 1;
+        assert.equal(project.id, 1);
+    });
+    it('should have child projects', function () {
+        var main = new Project(); 
+        var project_sub1 = new Project(); 
+        var project_sub2 = new Project();
+        var project_sub3 = new Project();
+
+        main.addProject(project_sub1);
+        main.addProject(project_sub2);
+        main.addProject(project_sub3);
+
+        main.getProjectCount();
+
+        assert.equal(main.getProjectCount(), 3);
+    });
 });
